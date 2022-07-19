@@ -37,8 +37,8 @@ public class ClienteController {
 	
 	@PutMapping("/clientes/login")
 	public ResponseEntity<Object> loginCliente (@RequestBody UserClienteDTO userClienteDTO){
-		clienteService.loginCliente(userClienteDTO);
-		return ResponseEntity.status(HttpStatus.OK).body("Login sussceful: Bienvenido " + userClienteDTO.getUserName());
+			   clienteService.loginCliente(userClienteDTO);
+		return ResponseEntity.status(HttpStatus.OK).body("Bienvenido " + userClienteDTO.getUserName());
 	}
 	
 	// Mostrar Lista de Clientes
@@ -59,18 +59,16 @@ public class ClienteController {
 
 	@PutMapping("/clientes/editar/{id_cliente}")
 	public ResponseEntity<String> editCliente(@PathVariable Long id_cliente, @Valid @RequestBody Cliente cliente) {
-
-			clienteService.editCliente(id_cliente, cliente);
-			return ResponseEntity.status(HttpStatus.OK).body("El Cliente se actualizó correctamente");	
+			   clienteService.editCliente(id_cliente, cliente);
+		return ResponseEntity.status(HttpStatus.OK).body("El Cliente se actualizó correctamente");	
 	}
 
 	// Eliminar Cliente por ID
 
 	@DeleteMapping("/clientes/eliminar/{id_cliente}")
 	public ResponseEntity<String> deleteCliente(@PathVariable Long id_cliente) {
-		
-			clienteService.deleteCliente(id_cliente);
-			return ResponseEntity.status(HttpStatus.OK).body("El cliente se eliminó correctamente");	
+		       clienteService.deleteCliente(id_cliente);
+		return ResponseEntity.status(HttpStatus.OK).body("El cliente se eliminó correctamente");	
 	
 	}
 	
@@ -78,7 +76,7 @@ public class ClienteController {
 	
 	@PutMapping("/clientes/reactivar")
 	public ResponseEntity<Object> reactivarCliente(@RequestBody UserClienteDTO userDTO){
-		clienteService.reactivarCliente(userDTO);
+			   clienteService.reactivarCliente(userDTO);
 		return ResponseEntity.status(HttpStatus.OK).body("El cliente con usuario " + userDTO.getUserName() 
 																		           + " ah sido reactivado");
 	}

@@ -30,7 +30,7 @@ public class VentaController {
 
 	@PostMapping("/ventas/crear")
 	public ResponseEntity<String> createVenta(@Valid @RequestBody Venta venta) {
-		ventaService.createVenta(venta);
+			   ventaService.createVenta(venta);
 		return ResponseEntity.status(HttpStatus.CREATED).body("La venta se realizó correctamente");
 	}
 
@@ -81,7 +81,7 @@ public class VentaController {
 
 	@DeleteMapping("/cliente/eliminar/{codigo_venta}")
 	public ResponseEntity<String> deleteVenta(@PathVariable Long codigo_venta) {
-		ventaService.deleteVenta(codigo_venta);
+			   ventaService.deleteVenta(codigo_venta);
 		return ResponseEntity.status(HttpStatus.OK).body("La Venta se eliminó correctamente");
 	}
 }

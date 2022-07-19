@@ -26,7 +26,7 @@ public class RubroController {
 
 	@PostMapping("/rubros/crear")
 	public ResponseEntity<String> createRubro(@Valid @RequestBody Rubro rubro) {
-		rubroService.createRubro(rubro);
+			   rubroService.createRubro(rubro);
 		return ResponseEntity.status(HttpStatus.OK).body("El rubro se creó correctamente");			
 	}
 
@@ -34,7 +34,7 @@ public class RubroController {
 
 	@GetMapping("/rubros/traer/{id_rubro}")
 	public ResponseEntity<Object> getRubro(@PathVariable Long id_rubro){
-			return ResponseEntity.status(HttpStatus.OK).body(rubroService.findRubro(id_rubro));
+		return ResponseEntity.status(HttpStatus.OK).body(rubroService.findRubro(id_rubro));
 		
 	}
 	
@@ -49,7 +49,7 @@ public class RubroController {
 
 	@PutMapping("/rubros/editar/{id_rubro}")
 	public ResponseEntity<String> editRubro(@PathVariable Long id_rubro, @Valid @RequestBody Rubro rubro) {	
-			rubroService.editNameRubro(id_rubro, rubro);
+			   rubroService.editNameRubro(id_rubro, rubro);
 		return ResponseEntity.status(HttpStatus.OK).body("El rubro se actualizó correctamente");
 	}
 
@@ -57,7 +57,7 @@ public class RubroController {
 
 	@DeleteMapping("/rubros/eliminar/{id_rubro}")
 	public ResponseEntity<String> deleteRubro(@PathVariable Long id_rubro) {
-		rubroService.deleteRubro(id_rubro);
+		       rubroService.deleteRubro(id_rubro);
 		return ResponseEntity.status(HttpStatus.OK).body("El rubro se eliminó correctamente");
 	}
 	
@@ -65,7 +65,7 @@ public class RubroController {
 	
 	@PutMapping("/rubros/recuperar/{id_rubro}")
 	public ResponseEntity<String> recuperarRubro(@PathVariable Long id_rubro) {
-			rubroService.recuperarRubro(id_rubro);
+			   rubroService.recuperarRubro(id_rubro);
 		return ResponseEntity.status(HttpStatus.OK).body("El rubro se reestableció correctamente");
 	}
 	

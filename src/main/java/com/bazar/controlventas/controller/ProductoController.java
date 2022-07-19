@@ -28,7 +28,7 @@ public class ProductoController {
 
 	@PostMapping("/productos/crear")
 	public ResponseEntity<String> create(@Valid @RequestBody Producto producto) {
-		productoService.createProducto(producto);
+			   productoService.createProducto(producto);
 		return ResponseEntity.status(HttpStatus.CREATED).body("El producto se creó correctamente");
 	}
 
@@ -50,7 +50,7 @@ public class ProductoController {
 
 	@PutMapping("/productos/editar/{codigo_producto}")
 	public ResponseEntity<String> editProducto(@PathVariable Long codigo_producto, @Valid @RequestBody Producto producto){
-	    productoService.editProducto(codigo_producto, producto);
+			   productoService.editProducto(codigo_producto, producto);
 		return ResponseEntity.status(HttpStatus.OK).body("El producto se editó correctamente");
 	}
 
@@ -58,7 +58,7 @@ public class ProductoController {
 
 	@DeleteMapping("/productos/eliminar/{codigo_producto}")
 	public ResponseEntity<String> delete( @PathVariable Long codigo_producto) {
-		productoService.deleteProducto(codigo_producto);
+			   productoService.deleteProducto(codigo_producto);
 		return ResponseEntity.status(HttpStatus.OK).body("El producto se eliminó correctamente");
 	}
 
@@ -73,7 +73,7 @@ public class ProductoController {
 	
 	@PutMapping("/productos/recuperar/{codigo_producto}")
 	public ResponseEntity<String> reecuperarProducto(@PathVariable Long codigo_producto){
-	    productoService.recuperarProducto(codigo_producto);
+			   productoService.recuperarProducto(codigo_producto);
 		return ResponseEntity.status(HttpStatus.OK).body("El producto se restableció correctamente");
 	}
 	
