@@ -5,9 +5,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.bazar.controlventas.exceptions.BadRequestException;
 import com.bazar.controlventas.model.Rubro;
-import com.bazar.controlventas.model.exceptions.BadRequestException;
-import com.bazar.controlventas.model.repository.IRubroRepository;
+import com.bazar.controlventas.repository.IRubroRepository;
 
 @Service
 public class RubroService implements IRubroService {

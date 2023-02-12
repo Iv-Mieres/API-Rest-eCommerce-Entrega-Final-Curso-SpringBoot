@@ -13,13 +13,13 @@ import com.bazar.controlventas.dto.EditarVentasDTO;
 import com.bazar.controlventas.dto.MontoMayorDTO;
 import com.bazar.controlventas.dto.VentaProductosDTO;
 import com.bazar.controlventas.dto.VentasxFechaDTO;
+import com.bazar.controlventas.exceptions.BadRequestException;
+import com.bazar.controlventas.exceptions.StatusOkException;
 import com.bazar.controlventas.model.Cliente;
 import com.bazar.controlventas.model.Producto;
 import com.bazar.controlventas.model.Venta;
-import com.bazar.controlventas.model.exceptions.BadRequestException;
-import com.bazar.controlventas.model.exceptions.StatusOkException;
-import com.bazar.controlventas.model.repository.IClienteRepository;
-import com.bazar.controlventas.model.repository.IVentaRepository;;
+import com.bazar.controlventas.repository.IClienteRepository;
+import com.bazar.controlventas.repository.IVentaRepository;;
 
 @Service
 public class VentaService implements IVentaService {

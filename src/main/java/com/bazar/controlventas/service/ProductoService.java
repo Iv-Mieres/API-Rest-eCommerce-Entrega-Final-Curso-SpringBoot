@@ -6,11 +6,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.bazar.controlventas.exceptions.BadRequestException;
+import com.bazar.controlventas.exceptions.StatusOkException;
 import com.bazar.controlventas.model.Producto;
-import com.bazar.controlventas.model.exceptions.BadRequestException;
-import com.bazar.controlventas.model.exceptions.StatusOkException;
-import com.bazar.controlventas.model.repository.IProductoRepository;
-import com.bazar.controlventas.model.repository.IRubroRepository;
+import com.bazar.controlventas.repository.IProductoRepository;
+import com.bazar.controlventas.repository.IRubroRepository;
 
 @Service
 public class ProductoService implements IProductoService {

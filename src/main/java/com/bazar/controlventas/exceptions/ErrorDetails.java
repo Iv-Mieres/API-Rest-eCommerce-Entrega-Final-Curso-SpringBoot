@@ -1,4 +1,4 @@
-package com.bazar.controlventas.model.exceptions;
+package com.bazar.controlventas.exceptions;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

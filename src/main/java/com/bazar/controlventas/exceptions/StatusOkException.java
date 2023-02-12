@@ -1,4 +1,4 @@
-package com.bazar.controlventas.model.exceptions;
+package com.bazar.controlventas.exceptions;
 
 public class StatusOkException extends RuntimeException{
 

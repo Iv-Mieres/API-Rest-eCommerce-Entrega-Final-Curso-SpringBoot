@@ -1,4 +1,4 @@
-package com.bazar.controlventas.model.repository;
+package com.bazar.controlventas.repository;
 
 import java.time.LocalDate;
 

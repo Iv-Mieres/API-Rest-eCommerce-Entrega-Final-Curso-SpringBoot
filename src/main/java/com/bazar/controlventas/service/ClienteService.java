@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bazar.controlventas.dto.UserClienteDTO;
+import com.bazar.controlventas.exceptions.BadRequestException;
 import com.bazar.controlventas.model.Cliente;
-import com.bazar.controlventas.model.exceptions.BadRequestException;
-import com.bazar.controlventas.model.repository.IClienteRepository;
+import com.bazar.controlventas.repository.IClienteRepository;
 
 @Service
 public class ClienteService implements IClienteService {
